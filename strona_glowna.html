@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strona Główna</title>
+  <link rel="stylesheet" href="./css/style2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="strona_glowna.html">
+      <img src="./img/DoorPRO%20Logo.jpg" alt="Logo" class="logo">
+    </a>
+    <div class="line"></div>
+    <a href="index.html">Oferta</a>
+    <div class="line"></div>
+    <a href="kontakt.html">Kontakt</a>
+    <div class="line"></div>
+    <img class="logo" src="./img/BoltPRO%20logo.jpg">
+  </nav>
+  <div class="hero-tło">
+  <img id="background" src="./img_2/tło_główne.jpg">
+  </div>
+
+  <section class="o-nas">
+    <p>O Nas</p>
+    <div class="lewa_prawa">
+    <div class="O-Nas-Lewa">
+      <p>Witaj w DoorPRO - Twoim partnerze w kreowaniu wyjątkowych przestrzeni dzięki najwyższej jakości drzwiom od renomowanych krajowych producentów. Nasza firma oferuje nie tylko szeroki wybór produktów, ale także zapewnia kompleksowe wsparcie, począwszy od profesjonalnego doradztwa, aż po perfekcyjny montaż.</p>
+      <img class="ikona_drzwi" src="./img_2/door-open-colored%20(1).svg">
+    </div>
+    <div class="O-Nas-Prawa">
+      <img class="zdjęcie-o-nas" src="./img_2/zdjęcie%20o%20nas.png">
+    </div>
+    </div>
+  </section>
+
+  <section class="trzy-bloki">
+    <div class="blok">
+      <p>Nie lubimy czekać, dlatego skracamy terminy realizacji zamówień, abyś mógł cieszyć się swoimi nowymi drzwiami szybciej niż się spodziewasz. A nasze konkurencyjne ceny sprawią, że realizacja Twoich marzeń o pięknych i funkcjonalnych drzwiach będzie jeszcze bardziej dostępna.</p>
+      <img src="./img_2/zdj_blok_1.png">
+    </div>
+    <div class="blok">
+      <p>Kładziemy duży nacisk na profesjonalizm, dlatego nasz zespół montażowy dba o to, aby każde drzwi zostały zamontowane z najwyższą precyzją i starannością. Dzięki temu będą estetycznym elementem Twojego domu, ale także zapewnią bezpieczeństwo i komfort przez wiele lat.</p>
+      <img src="./img_2/zdj_blok_2.png">
+    </div>
+    <div class="blok">
+      <p>Nasi doświadczeni doradcy pomogą Ci w wyborze drzwi idealnie pasujących do Twojego wnętrza, podkreślając jego styl i funkcjonalność. Bez względu na to, czy szukasz eleganckich drzwi wewnętrznych czy solidnych drzwi zewnętrznych, możesz liczyć na naszą wiedzę i zaangażowanie.</p>
+      <img src="./img_2/zdj_blok_3.png">
+    </div>
+  </section>
+  <section class="carousel-section">
+    <h2>Nasze realizacje</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="./img_2/realizacja%201.jpg" alt="Slide 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="./img_2/realizacja%202.jpg" alt="Slide 2">
+        </div>
+        <div class="carousel-slide">
+          <img src="./img_2/realizacja%203.jpg" alt="Slide 3">
+        </div>
+        <div class="carousel-slide">
+          <img src="./img_2/realizacja%201.jpg" alt="Slide 4">
+        </div>
+        <div class="carousel-slide">
+          <img src="./img_2/realizacja%202.jpg" alt="Slide 5">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <p class="contact-text">
+      Zapraszamy do kontaktu, abyśmy mogli wspólnie stworzyć wyjątkowe rozwiązanie dopasowane do Twoich potrzeb i oczekiwań.
+      W DoorPRO nie tylko sprzedajemy drzwi - tworzymy tu przestrzenie, które inspirują i zachwycają!
+    </p>
+    <div class="contact-button-container">
+      <button class="contact-button">
+        Skontaktuj się z nami już teraz!
+        <img src="./img_2/phone-504.svg" alt="phone icon">
+      </button>
+    </div>
+  </section>
+
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const slideWidth = 300; // Stała szerokość każdego slajdu
+    let currentIndex = 0;
+
+    function moveCarousel() {
+      currentIndex += 1;
+
+      if (currentIndex >= slides.length) {
+        // Wraca na początek, gdy osiąga koniec
+        currentIndex = 0;
+        track.style.transition = 'none'; // Usuń animację na czas resetu
+        track.style.transform = `translateX(0px)`;
+        setTimeout(() => {
+          track.style.transition = 'transform 0.5s ease-in-out'; // Przywróć animację
+        }, 50);
+      } else {
+        const newTransform = -slideWidth * currentIndex;
+        track.style.transform = `translateX(${newTransform}px)`;
+      }
+    }
+
+    // Uruchamianie karuzeli automatycznie co 5 sekund
+    setInterval(moveCarousel, 5000);
+  </script>
+</body>
+</html>

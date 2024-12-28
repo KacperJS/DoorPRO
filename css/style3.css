@@ -1,0 +1,202 @@
+/* Globalne ustawienia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #05161e;
+  font-family: 'Poppins', sans-serif; /* Globalne ustawienie czcionki */
+}
+
+nav {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #05161e;
+}
+
+nav a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #44c0ba;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+}
+
+.line {
+  width: 3px;
+  height: 50px;
+  background-color: #44c0ba;
+  margin: 0 10px;
+}
+
+
+.contact-section {
+  background-color: #05161e;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-box {
+  background-color: #164447;
+  border-radius: 20px;
+  padding: 20px 30px;
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.contact-box h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.contact-box p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.contact-item img {
+  width: 50px;
+  height: 50px;
+
+
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+}
+
+body > section > div.contact-box > div.social-icons > img:nth-child(5){
+  width: 150px;
+}
+
+.info-box {
+  background-color: #164447;
+  border-radius: 20px;
+  padding: 20px 30px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.info-box p {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 360px) {
+  nav {
+    height: auto;
+    padding: 10px;
+    justify-content: space-between; /* Zapewnia równomierne rozmieszczenie */
+  }
+
+  nav .logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .contact-section {
+    padding: 10px;
+  }
+
+  .contact-box {
+    padding: 10px;
+    width: 320px;
+  }
+
+  .contact-box h2 {
+    font-size: 20px;
+  }
+
+  .contact-box p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .contact-info {
+    flex-direction: column; /* Kolumnowy układ kontaktów */
+    gap: 15px;
+    align-items: center;
+  }
+
+  .contact-item {
+    flex-direction: row; /* Ikona i tekst obok siebie */
+    gap: 10px;
+    align-items: center;
+  }
+
+  .contact-item img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+  }
+
+  body > section > div.contact-box > div.social-icons > img:nth-child(5) {
+    width: 100px;
+  }
+
+  .info-box {
+    padding: 10px;
+  }
+
+  .info-box p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}

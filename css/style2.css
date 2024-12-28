@@ -1,0 +1,442 @@
+/* Globalne ustawienia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #05161e;
+  font-family: 'Poppins', sans-serif; /* Globalne ustawienie czcionki */
+}
+
+nav {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #05161e;
+}
+
+nav a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #44c0ba;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+}
+
+.line {
+  width: 3px;
+  height: 50px;
+  background-color: #44c0ba;
+  margin: 0 10px;
+}
+
+.hero-tło{
+  width: 100%;
+}
+
+.hero-tło img{
+  width: 100%; /* Rozciąga zdjęcie do szerokości kontenera */
+}
+
+.lewa_prawa{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 800px;
+  width: 100%;
+}
+
+.O-Nas-Lewa{
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+  width: 800px;
+  background: #444443;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+
+.O-Nas-Lewa p {
+  width: 600px;
+  font-size: 25px;
+  text-align: justify;
+  color: white;
+  margin: 75px 20px 20px 20px;
+}
+
+.ikona_drzwi{
+  width: 250px;
+  height: 250px;
+  margin-top: 125px;
+}
+
+
+.O-Nas-Prawa{
+  height: 800px;
+  width: 500px;
+  display: flex;
+  background: #444443;
+}
+
+body > section.o-nas > p{
+  font-size: 45px;
+  font-weight: bolder;
+  color: white;
+  position: relative;
+  top: 80px;
+  left: 400px;
+}
+
+.zdjęcie-o-nas{
+  height: 700px;
+  width: 750px;
+  top: 50px;
+  position: relative;
+  right: 250px;
+}
+
+.ikona_drzwi{
+  fill: #44c0ba;
+}
+
+
+.trzy-bloki {
+  margin-top: 25px;
+  width: 100%;
+  background: #444443;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* Odstęp między blokami */
+  padding: 20px 0;
+}
+
+.blok {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #05161e;
+  width: 90%; /* Ustaw szerokość względem rodzica */
+  max-width: 1200px; /* Maksymalna szerokość */
+  height: 350px;
+  border-radius: 20px;
+  position: relative; /* Kluczowe do precyzyjnego umieszczenia obrazu */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.blok img {
+  position: absolute; /* Pozycjonowanie obrazów względem kontenera */
+  top: 0; /* Przyklejenie do górnego narożnika */
+  right: 0; /* Przyklejenie do prawego narożnika */
+  width: 35%; /* Zdjęcie zajmuje połowę szerokości kontenera */
+  height: 100%; /* Wypełnia wysokość kontenera */
+  object-fit: cover; /* Dopasowanie proporcji */
+  border-top-right-radius: 20px; /* Zaokrąglenie narożników obrazu */
+  border-radius: 20px;
+}
+
+.blok p {
+  margin-left: 100px;
+  width: 45%; /* Szerokość tekstu */
+  height: 300px;
+  font-size: 24px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: justify;
+  z-index: 1; /* Aby tekst był nad zdjęciem */
+
+  border-bottom: 3px solid #44c0ba;
+}
+
+.carousel-section {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #05161e;
+}
+
+.carousel-section h2 {
+  font-size: 28px;
+  color: #44c0ba;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  overflow: hidden; /* Ukrywa obrazy poza widocznym obszarem */
+  width: 100%;
+  max-width: 1200px; /* Maksymalna szerokość karuzeli */
+  height: 800px; /* Wysokość karuzeli zgodna z obrazami */
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Płynny ruch karuzeli */
+  gap: 40px; /* Odstęp między slajdami */
+  height: 100%; /* Dopasowanie do wysokości kontenera */
+}
+
+.carousel-slide {
+  flex: 0 0 calc((100% - 80px) / 3); /* Trzy slajdy widoczne jednocześnie */
+  height: 100%; /* Dopasowanie do wysokości karuzeli */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%; /* Obrazy wypełniają całe kontenery */
+  object-fit: cover; /* Zachowanie proporcji i wypełnienie przestrzeni */
+  border-radius: 10px;
+}
+
+.contact-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #05161e; /* Tło sekcji */
+}
+
+.contact-text {
+  font-size: 24px;
+
+  font-weight: bold;
+  color: white;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.contact-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-button {
+  background-color: #44c0ba; /* Kolor przycisku */
+  color: black;
+  font-size: 24px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Odstęp między tekstem a ikoną */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 450px;
+}
+
+.contact-button img {
+  width: 50px;
+  height: 50px;
+}
+
+.contact-button:hover {
+  background-color: #37a7a1; /* Zmiana koloru przycisku po najechaniu */
+}
+
+
+@media (max-width: 1366px) {
+
+.O-Nas-Lewa{
+  width: 700px;
+  border-radius: 20px;
+}
+
+.O-Nas-Lewa p {
+  font-size: 24px;
+  margin: 50px 20px 20px 20px;
+}
+
+.zdjęcie-o-nas{
+  width: 650px;
+  height: 500px;
+  position: relative;
+  right: 100px;
+  top: 100px;
+  border-radius: 20px;
+}
+
+.O-Nas-Prawa{
+height: 700px;
+}
+
+@media (min-width: 1920px) {
+
+
+  body > section.o-nas > div > div.O-Nas-Prawa > img {
+  }
+
+  width: 100%;
+  height: 500px;
+  border-radius: 30px;
+  position: relative;
+  right: 400px;
+}
+
+  @media (max-width: 360px) {
+
+    /* ===== Globalne ustawienia ===== */
+    nav {
+      flex-direction: row;
+      height: auto;
+      padding: 10px 0;
+    }
+
+    nav .logo {
+      height: 50px;
+      width: 50px;
+    }
+
+    nav a {
+      font-size: 14px;
+    }
+
+    nav .line {
+      height: 20px;
+    }
+
+    .hero-tło img {
+      height: auto;
+      width: 100%;
+    }
+
+    /* ===== Sekcja O Nas ===== */
+    .o-nas p {
+      font-size: 24px;
+      top: 10px;
+      left: auto;
+      right: auto;
+
+    }
+
+    body > section.o-nas > div > div.O-Nas-Lewa > p{
+    width: 300px;
+  }
+
+    body > section.o-nas > p {
+      left: auto;
+      right: auto;
+      text-align: center;
+      bottom: 200px;
+      top: 0;
+      font-size: 25px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .lewa_prawa {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      height: auto;
+    }
+
+    .O-Nas-Lewa {
+      width: 90%;
+      height: auto;
+      margin-left: 0;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .O-Nas-Lewa p {
+      font-size: 14px;
+      margin: 10px;
+    }
+
+    .ikona_drzwi {
+      width: 100px;
+      height: 100px;
+      margin: 10px auto;
+    }
+
+    .O-Nas-Prawa {
+      width: 90%;
+      height: auto;
+    }
+
+    .zdjęcie-o-nas {
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+      border-radius: 10px;
+      margin: 0 auto;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+
+    /* ===== Sekcja Trzy Bloki ===== */
+    .trzy-bloki {
+      gap: 15px;
+      padding: 10px 0;
+    }
+
+    .blok {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+    }
+
+    .blok p {
+      width: 100%;
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+
+  .blok p{
+    margin-left: 0px;
+    margin-bottom: 0px;
+    width: 300px;
+    height: 180px;
+    border-bottom-width: 0px;
+
+  }
+
+    .blok img {
+      position: static;
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+    }
+
+    .carousel {
+      width: 300px; /* Szerokość kontenera */
+      overflow: hidden; /* Ukrywa niewidoczne części */
+      margin: 0 auto; /* Wyśrodkowanie */
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      gap: 0; /* Bez odstępów między slajdami */
+    }
+
+    .carousel-slide {
+      flex: 0 0 300px; /* Każdy slajd dokładnie 300px */
+      height: auto; /* Dopasowanie wysokości */
+    }
+
+    .carousel-slide img {
+      width: 100%; /* Obraz zajmuje cały slajd */
+      height: auto; /* Zachowanie proporcji */
+      object-fit: cover; /* Dobre dopasowanie */
+      border-radius: 10px;
+    }
+  }
