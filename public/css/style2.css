@@ -440,3 +440,168 @@ height: 700px;
       border-radius: 10px;
     }
   }
+
+
+  @media (max-width: 480px) {
+
+      /* ===== Globalne ustawienia ===== */
+      nav {
+        flex-direction: row;
+        height: auto;
+        padding: 10px 0;
+        width: 95%;
+      }
+
+      nav .logo {
+        height: 50px;
+        width: 50px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      nav .line {
+        height: 20px;
+      }
+
+      .hero-tło img {
+        height: auto;
+        width: 100%;
+      }
+
+      /* ===== Sekcja O Nas ===== */
+      .o-nas p {
+        font-size: 24px;
+        top: 10px;
+        left: auto;
+        right: auto;
+
+      }
+
+      body > section.o-nas > div > div.O-Nas-Lewa > p{
+        width: 95%;
+      }
+
+      body > section.o-nas > p {
+        left: auto;
+        right: auto;
+        text-align: center;
+        bottom: 200px;
+        top: 0;
+        font-size: 25px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      .lewa_prawa {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        height: auto;
+      }
+
+      .O-Nas-Lewa {
+        width: 90%;
+        height: auto;
+        margin-left: 0;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .O-Nas-Lewa p {
+        font-size: 14px;
+        margin: 10px;
+      }
+
+      .ikona_drzwi {
+        width: 100px;
+        height: 100px;
+        margin: 10px auto;
+      }
+
+      .O-Nas-Prawa {
+        width: 90%;
+        height: auto;
+      }
+
+      .zdjęcie-o-nas {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        border-radius: 10px;
+        margin: 0 auto;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+
+      /* ===== Sekcja Trzy Bloki ===== */
+      .trzy-bloki {
+        gap: 15px;
+        padding: 10px 0;
+      }
+
+      .blok {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+      }
+
+      .blok p {
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 10px;
+        text-align: justify;
+      }
+
+      .blok p{
+        margin-left: 0px;
+        margin-bottom: 0px;
+        height: 180px;
+        border-bottom-width: 0px;
+
+      }
+
+      .carousel-section{
+      width: 95%;
+        height: 600px;
+      }
+
+      .blok img {
+        position: static;
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+      }
+
+      .carousel {
+        width: 95%; /* Szerokość kontenera */
+        overflow: hidden; /* Ukrywa niewidoczne części */
+        margin: 0 auto; /* Wyśrodkowanie */
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        gap: 0; /* Bez odstępów między slajdami */
+      }
+
+      .carousel-slide {
+        flex: 0 0 300px; /* Każdy slajd dokładnie 300px */
+        height: auto; /* Dopasowanie wysokości */
+      }
+
+      .carousel-slide img {
+        width: 100%; /* Obraz zajmuje cały slajd */
+        height: auto; /* Zachowanie proporcji */
+        object-fit: cover; /* Dobre dopasowanie */
+        border-radius: 10px;
+      }
+
+
+      .contact-section{
+      padding-top: 0;
+      }
+    }

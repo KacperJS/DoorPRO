@@ -125,7 +125,7 @@ body > section > div.contact-box > div.social-icons > img:nth-child(5){
 }
 
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   nav {
     height: auto;
     padding: 10px;
