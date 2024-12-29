@@ -1310,6 +1310,7 @@ nav a {
       margin-top: 100px;
       width: 200px;
       height: 220px;
+      right: auto;
     }
 
     .GERDA .line_separator {
@@ -1318,6 +1319,8 @@ nav a {
       background-color: #44c0ba; /* Kolor linii */
       margin: 10px auto; /* Wyśrodkowanie linii */
     }
+
+
 
     .do_pobrania_GERDA .download_item {
       width: 90%;
