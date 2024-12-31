@@ -1,0 +1,237 @@
+/* Globalne ustawienia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #05161e;
+  font-family: 'Poppins', sans-serif; /* Globalne ustawienie czcionki */
+}
+
+nav {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #05161e;
+}
+
+nav a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #44c0ba;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+}
+
+.line {
+  width: 3px;
+  height: 50px;
+  background-color: #44c0ba;
+  margin: 0 10px;
+}
+
+
+.Bolt-PRO {
+  width: 95%; /* Szerokość sekcji */
+  margin: 20px auto; /* Wyśrodkowanie poziome */
+  padding: 20px; /* Wewnętrzne odstępy */
+  background-color: #05161e; /* Tło dopasowane do ogólnego motywu */
+  border-radius: 15px; /* Zaokrąglenie rogów */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Efekt cienia dla lepszego wyglądu */
+  color: #ffffff; /* Kolor tekstu */
+  text-align: justify; /* Wyrównanie tekstu */
+  line-height: 1.8; /* Lepsza czytelność */
+  font-size: 22px; /* Rozmiar tekstu */
+}
+
+.Bolt-PRO h2 {
+  font-size: 28px; /* Większy rozmiar nagłówka */
+  color: #44c0ba; /* Kolor akcentowy dla nagłówka */
+  text-align: center; /* Wyśrodkowanie nagłówka */
+  margin-bottom: 15px; /* Odstęp poniżej nagłówka */
+}
+
+.Bolt-PRO p {
+  margin-top: 10px;
+}
+
+/* ===== Sekcja Trzy Bloki ===== */
+.trzy-bloki {
+  margin-top: 25px;
+  width: 90%; /* Cała sekcja zajmuje 90% szerokości ekranu */
+  background: #444443;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* Odstęp między blokami */
+  padding: 20px 0;
+}
+
+.blok {
+  display: flex;
+  flex-direction: row; /* Ustawienie karuzeli i tekstu w rzędzie */
+  justify-content: space-between;
+  align-items: center;
+  background: #05161e;
+  width: 90%; /* Każdy blok zajmuje 90% szerokości sekcji */
+  max-width: 1200px; /* Maksymalna szerokość bloku */
+  height: 400px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.blok p {
+  width: 50%; /* Tekst zajmuje 50% szerokości bloku */
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: justify;
+  margin: 0;
+}
+
+/* ===== Sekcja Trzy Bloki ===== */
+.trzy-bloki {
+  margin: 25px auto; /* Wyśrodkowanie całej sekcji */
+  width: 90%; /* Cała sekcja zajmuje 90% szerokości ekranu */
+  max-width: 1680px; /* Maksymalna szerokość sekcji */
+  background: #444443;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* Odstęp między blokami */
+  padding: 20px 0;
+}
+
+.blok {
+  display: flex;
+  flex-direction: row; /* Ustawienie karuzeli i tekstu w rzędzie */
+  justify-content: space-between;
+  align-items: center;
+  background: #05161e;
+  width: 90%; /* Każdy blok zajmuje 90% szerokości sekcji */
+  max-width: 1200px; /* Maksymalna szerokość bloku */
+  height: 400px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.blok p {
+  width: 50%; /* Tekst zajmuje 50% szerokości bloku */
+  font-size: 24px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: justify;
+  margin: 0;
+  margin-right: 20px;
+}
+
+
+/* ===== Karuzela ===== */
+.carousel-section {
+  width: 450px; /* Stała szerokość */
+  height: 400px; /* Stała wysokość */
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start; /* Wyśrodkowanie w kontenerze */
+  align-items: center;
+
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 450px; /* Stała szerokość karuzeli */
+  height: 400px; /* Stała wysokość karuzeli */
+  margin: 0 auto; /* Wyśrodkowanie */
+  justify-content: flex-start;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  flex: 0 0 450px; /* Każdy slajd zajmuje dokładnie 320px */
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain; /* Dopasowanie proporcji zdjęcia */
+}
+
+.carousel-slide img {
+  width: 100%; /* Dopasowanie do szerokości slajdu */
+  height: 100%; /* Dopasowanie do wysokości slajdu */
+  object-fit: cover; /* Zachowanie proporcji z przycięciem */
+  border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  .trzy-bloki {
+    gap: 15px; /* Zmniejszenie odstępów między blokami */
+    padding: 10px 0;
+  }
+
+  .blok {
+    flex-direction: column; /* Zmiana układu na kolumnowy */
+    align-items: center; /* Wyśrodkowanie elementów */
+    padding: 10px;
+    height: 450px;
+  }
+
+  .blok p {
+    width: 90%; /* Zmniejszenie szerokości tekstu */
+    font-size: 16px; /* Mniejszy rozmiar tekstu */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    line-height: 1.5; /* Poprawienie odstępów między liniami */
+    margin-bottom: 10px; /* Dodanie odstępu poniżej tekstu */
+  }
+
+  .carousel-section {
+    width: 100%; /* Karuzela dostosowuje się do szerokości kontenera */
+    height: 400px; /* Stała wysokość */
+    overflow: hidden; /* Ukrywanie wystających elementów */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Karuzela zajmuje pełną szerokość kontenera */
+    height: 100%; /* Dostosowanie do wysokości sekcji */
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%; /* Każdy slajd zajmuje pełną szerokość kontenera */
+    height: 100%; /* Dopasowanie wysokości */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-slide img {
+    max-width: 100%; /* Ogranicz szerokość obrazu */
+    max-height: 100%; /* Ogranicz wysokość obrazu */
+    object-fit: contain; /* Zachowanie proporcji obrazu */
+    border-radius: 10px; /* Zaokrąglenie rogów */
+  }
+}

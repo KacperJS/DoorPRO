@@ -157,47 +157,39 @@ body > section.o-nas > p{
 
   border-bottom: 3px solid #44c0ba;
 }
-
-.carousel-section {
+body > section.carousel-section > h2{
+  width: 100%;
   text-align: center;
-  padding: 20px 0;
-  background-color: #05161e;
-}
-
-.carousel-section h2 {
-  font-size: 28px;
-  color: #44c0ba;
+  margin-top: 20px;
+  color: white;
   margin-bottom: 20px;
+  font-size: 40px;
 }
 
 .carousel {
   overflow: hidden; /* Ukrywa obrazy poza widocznym obszarem */
-  width: 100%;
+  width: 40%; /* Karuzela zajmuje 40% szerokości rodzica */
   max-width: 1200px; /* Maksymalna szerokość karuzeli */
-  height: 800px; /* Wysokość karuzeli zgodna z obrazami */
-  margin: 0 auto;
+  height: 800px; /* Wysokość karuzeli */
+  margin: 0 auto; /* Wyśrodkowanie */
   position: relative;
+  border-radius: 10px; /* Zaokrąglenie rogów */
 }
 
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out; /* Płynny ruch karuzeli */
-  gap: 40px; /* Odstęp między slajdami */
-  height: 100%; /* Dopasowanie do wysokości kontenera */
+.carousel-item {
+  width: 100%; /* Obraz wypełnia szerokość rodzica */
+  height: 100%; /* Obraz wypełnia wysokość rodzica */
+  object-fit: cover; /* Dopasowanie obrazu do kontenera */
+  position: absolute; /* Obrazy nakładają się na siebie */
+  top: 0;
+  left: 0;
+  opacity: 0; /* Obrazy domyślnie są niewidoczne */
+  transition: opacity 0.5s ease-in-out; /* Płynne przejście widoczności */
 }
 
-.carousel-slide {
-  flex: 0 0 calc((100% - 80px) / 3); /* Trzy slajdy widoczne jednocześnie */
-  height: 100%; /* Dopasowanie do wysokości karuzeli */
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: 100%; /* Obrazy wypełniają całe kontenery */
-  object-fit: cover; /* Zachowanie proporcji i wypełnienie przestrzeni */
-  border-radius: 10px;
+.carousel-item.active {
+  opacity: 1; /* Widoczny obraz */
+  z-index: 1; /* Obraz z klasą active znajduje się nad innymi */
 }
 
 .contact-section {
@@ -564,11 +556,6 @@ height: 700px;
 
       }
 
-      .carousel-section{
-      width: 95%;
-        height: 600px;
-      }
-
       .blok img {
         position: static;
         width: 100%;
@@ -576,32 +563,25 @@ height: 700px;
         border-radius: 10px;
       }
 
+    @media (max-width: 480px) {
       .carousel {
-        width: 95%; /* Szerokość kontenera */
-        overflow: hidden; /* Ukrywa niewidoczne części */
-        margin: 0 auto; /* Wyśrodkowanie */
+        height: 600px;
+        width: 80%;
+
       }
 
-      .carousel-track {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        gap: 0; /* Bez odstępów między slajdami */
+      .carousel-item {
+        object-fit: contain;
+        border-radius: 20px;/* Umożliwia dopasowanie całego obrazu bez przycinania */
       }
 
-      .carousel-slide {
-        flex: 0 0 300px; /* Każdy slajd dokładnie 300px */
-        height: auto; /* Dopasowanie wysokości */
-      }
-
-      .carousel-slide img {
-        width: 100%; /* Obraz zajmuje cały slajd */
-        height: auto; /* Zachowanie proporcji */
-        object-fit: cover; /* Dobre dopasowanie */
-        border-radius: 10px;
-      }
-
-
-      .contact-section{
-      padding-top: 0;
-      }
+      .carousel-item active{
+        border-radius: 20px;
     }
+      body > section.carousel-section > h2{
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+        color: white;
+    }
+    }};

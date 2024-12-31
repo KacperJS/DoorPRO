@@ -19,7 +19,9 @@
     <div class="line"></div>
     <a href="kontakt.html">Kontakt</a>
     <div class="line"></div>
-    <img class="logo" src="./img/BoltPRO%20logo.jpg">
+    <a href="Bolt.html">
+      <img class="logo" src="./img/BoltPRO%20logo.jpg">
+    </a>
   </nav>
   <div class="hero-tło">
   <img id="background" src="./img_2/tło_główne.jpg">
@@ -55,23 +57,9 @@
   <section class="carousel-section">
     <h2>Nasze realizacje</h2>
     <div class="carousel">
-      <div class="carousel-track">
-        <div class="carousel-slide">
-          <img src="./img_2/realizacja%201.jpg" alt="Slide 1">
-        </div>
-        <div class="carousel-slide">
-          <img src="./img_2/realizacja%202.jpg" alt="Slide 2">
-        </div>
-        <div class="carousel-slide">
-          <img src="./img_2/realizacja%203.jpg" alt="Slide 3">
-        </div>
-        <div class="carousel-slide">
-          <img src="./img_2/realizacja%201.jpg" alt="Slide 4">
-        </div>
-        <div class="carousel-slide">
-          <img src="./img_2/realizacja%202.jpg" alt="Slide 5">
-        </div>
-      </div>
+      <img class="carousel-item active" src="./img_2/realizacja%201.jpg" alt="Realizacja 1">
+      <img class="carousel-item" src="./img_2/realizacja%202.jpg" alt="Realizacja 2">
+      <img class="carousel-item" src="./img_2/realizacja%203.jpg" alt="Realizacja 3">
     </div>
   </section>
 
@@ -90,30 +78,22 @@
 
 
   <script>
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const slideWidth = 300; // Stała szerokość każdego slajdu
-    let currentIndex = 0;
+    document.addEventListener("DOMContentLoaded", () => {
+      const items = document.querySelectorAll(".carousel-item"); // Pobierz wszystkie obrazy
+      let currentIndex = 0; // Zaczynamy od pierwszego obrazu
 
-    function moveCarousel() {
-      currentIndex += 1;
-
-      if (currentIndex >= slides.length) {
-        // Wraca na początek, gdy osiąga koniec
-        currentIndex = 0;
-        track.style.transition = 'none'; // Usuń animację na czas resetu
-        track.style.transform = `translateX(0px)`;
-        setTimeout(() => {
-          track.style.transition = 'transform 0.5s ease-in-out'; // Przywróć animację
-        }, 50);
-      } else {
-        const newTransform = -slideWidth * currentIndex;
-        track.style.transform = `translateX(${newTransform}px)`;
+      function showNextImage() {
+        // Usuń klasę "active" z bieżącego obrazu
+        items[currentIndex].classList.remove("active");
+        // Przełącz na następny obraz (lub wróć na początek)
+        currentIndex = (currentIndex + 1) % items.length;
+        // Dodaj klasę "active" do nowego obrazu
+        items[currentIndex].classList.add("active");
       }
-    }
 
-    // Uruchamianie karuzeli automatycznie co 5 sekund
-    setInterval(moveCarousel, 5000);
+      // Automatyczna zmiana obrazów co 5 sekund
+      setInterval(showNextImage, 5000);
+    });
   </script>
 </body>
 </html>
