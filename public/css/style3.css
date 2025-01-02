@@ -24,6 +24,7 @@ nav a {
   font-size: 20px;
   font-weight: bold;
   color: #44c0ba;
+  text-decoration: none;
 }
 
 .logo {
@@ -86,6 +87,16 @@ nav a {
   color: #ffffff;
 }
 
+body > section > div.contact-box > div.contact-info > div:nth-child(1) > a{
+  text-decoration: none;
+  color: white;
+}
+
+body > section > div.contact-box > div.contact-info > div:nth-child(2) > a{
+  text-decoration: none;
+  color: white;
+}
+
 .contact-item img {
   width: 50px;
   height: 50px;
@@ -105,7 +116,7 @@ nav a {
   padding: 5px;
 }
 
-body > section > div.contact-box > div.social-icons > img:nth-child(5){
+body > section > div.contact-box > div.social-icons > a:nth-child(5) > img{
   width: 150px;
 }
 
